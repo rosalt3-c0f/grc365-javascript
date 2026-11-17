@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascript</title>
+<link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet">
+<style>
+	@font-face {
+	} @font-face {
+  	font-family: Freckle Face, serif;
+	src: url("FreckleFace-Regular.ttf");
+	} #page {
+		width: 928px;
+		height: 900px;
+		background: lavender;
+		color: dimgray;
+		margin: 0 auto;
+		border: 1px solid darkgray;
+		box-shadow: 2px 3px 6px darkgray;
+	} #banner-img {
+		width: 100%;
+	} h1 {
+		font: 40pt/1.0em 'Freckle face';
+		text-align: center;
+		text-shadow: 2px 3px 6px tan;
+	} h2 {
+		font: bold 14pt/2.0em Arial, serif;
+		text-align: center;
+	} p {
+		font: bold 15pt/1.5em Arial, serif;
+		width: 824px;
+		margin: 0 auto;
+		text-align: left;
+		} .floated-img {
+		margin: 0 24px 12px 0;
+		border: 1px solid dimgray;
+		box-shadow: 2px 3px 6px darkgray;
+		width: 464px;
+		float: left;
+	} figure {
+		width: 125px;
+		margin: 0, auto;
+		cursor: pointer;
+	} figcaption {
+		font: 12pt/1.3em Arial;
+		text-align: center;
+	} #buttons {
+		width: 500px;
+		margin: 5px auto 0 auto;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: flex-end;
+	} button {
+		width: 150px;
+		height: 50px;
+		font-size: 12 pt;
+		font-weight: bold;
+		margin: 6px;
+	} @media print {
+		body {
+			width: 7in;
+			height: 9.0in;
+		} figure {
+			display: none;
+			width: 0;
+			height: 0;
+		}
+	}
+</style>
+</head>
+
+<body>
+<div id = "page">
+<h1>The Nostalgia of Dino Nuggets</h1>
+<h2>Image by Inga in <a href= "https://stock.adobe.com/"> Adobe Stock</a> </h2>
+<p><img class="floated-img" src="inga-adobestock.jpeg"/>
+Chicken nuggets have always been a popular snack amongst many people. However, the dinosaur-shaped versions of this snack brings nostalgia and continues to be enjoyed by children till' this day. According to Dawn Hammon in her article, "The Origin Story of Icon Dino Chicken Nuggets," the invention of this childhood joy of a snack was attributed to Cornell University agricultural scientist Robert C. Baker in 1963. He did not patent this delectable treat, but rather distributed the recipe to hundreds of food companies instead (Hammon, 2024). Who knew how successful these adorable dinosaur-shaped nuggets would be? Pair them up with a side of ranch or mashed potatoes with gravy and you have yourself a dinosaur (or perhaps chicken) paradise.</p>
+	
+<div id="buttons">
+	<figure>
+	<img onClick="printPage()" src="dinonugget.png"
+	height="110" />
+	<figcaption>Print Window</figcaption>
+	</figure>
+	
+	<figure>
+	<img onClick="increaseContrast()" src="dinonugget3.png"
+	height="110" />
+	<figcaption>Increase Contrast</figcaption>
+	</figure>
+	
+	<figure>
+	<img onClick="resetContrast()" src="dinonugget2.png"
+	height="110" />
+	<figcaption>Reset Contrast</figcaption>
+	</figure>
+</div>
+	
+<div>
+<script>
+	function printPage() {
+		window.print();
+	} function increaseContrast() {
+		
+		document.getElementById('page').style.background='white';
+		
+		document.getElementById('page').style.color='black';
+	} function resetContrast() {
+		document.getElementById('page').style.background='lavender';
+		
+		document.getElementById('page').style.color='dimgray';
+	}
+	</script>
+</div>
+</div>
+</body>
+</html>
